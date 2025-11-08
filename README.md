@@ -1,85 +1,100 @@
-🧰 Bash Scripting Suite for System Maintenance (Capstone Project)
-Developer: Sai Kiran
+🧠 Bash System Maintenance Suite (Capstone Project)
 
-Course: Linux OS & LSP
-Project Type: Bash Scripting Automation
+**Developer:** Sai Kiran  
+**Course:** Linux OS & System Programming  
+**Project Type:** Bash Scripting Automation  
 
-📘 Project Overview
-This project is a Bash Scripting Suite for System Maintenance that automates essential administrative tasks such as:
+---
 
-Automated system backups
+## 📘 Project Overview
 
-System updates and cleanup
+This project is a **Bash Scripting Suite for System Maintenance** that automates key administrative tasks such as:
 
-Log file monitoring for warnings or errors
+- 🗂️ Automated system backups  
+- ⚡ System updates and cleanup  
+- 🔍 Log file monitoring for warnings or errors  
+- 🧮 Interactive menu for running all tasks easily  
 
-Combined maintenance suite to execute all tasks efficiently
+The suite ensures efficient system maintenance and keeps detailed logs for every task performed, helping users manage Linux environments effortlessly.
 
-The suite ensures efficient system upkeep, reduces manual effort, and maintains comprehensive logs for every operation.
+---
 
-🎯 Objectives
+## 🎯 Objectives
 
-Automate repetitive Linux maintenance operations
+- Automate repetitive Linux maintenance operations  
+- Reduce manual errors in system updates and backups  
+- Provide quick system status feedback via logs  
+- Demonstrate Bash scripting, process automation, and error handling  
 
-Minimize manual errors in updates and backups
+---
 
-Provide system health feedback through detailed logs
+## 🧩 Technologies Used
 
-Demonstrate shell scripting, process automation, and log handling
+- 🐧 **Bash Scripting**
+- 🖥️ **Linux Command-line**
+- ⏰ **Cron Automation (Optional)**
+- ⚙️ **System Administration Tools**
 
-🧩 Technologies Used
+---
 
-Bash Scripting
+## 🧱 Project Structure
 
-Linux Command-line Interface
-
-Cron Job Scheduling (optional automation)
-
-Core System Administration Tools
-
-🧩 Project Structure
-
-linux-maintenance-suite/
+bash-system-maintenance-suite/
 │
-├── backup.sh          # Automates system backup with timestamp
-├── update.sh          # Updates and cleans the system
-├── logmonitor.sh      # Monitors system logs for warnings/errors
-├── menu.sh            # Interactive menu for the suite
+├── backup.sh # Automates system backups with timestamp
+├── update_cleanup.sh # Updates and cleans the system
+├── log_monitor.sh # Monitors system logs for warnings/errors
+├── maintenance_suite.sh # Interactive menu-driven main script
 │
-├── maintenance_logs/  # Directory for storing logs (auto-created)
-└── README.md          # Project documentation
-⚙️ Setup Instructions
+├── maintenance_logs/ # Directory for storing log files (auto-created)
+└── README.md # Project documentation
 
-Clone the Repository
-
-bash
+yaml
 Copy code
-git clone https://github.com/DevAshuTosh10/Linux-maintenance-suite-Capstone-Proj-5-Ashutosh_Satpathy.git
-cd Linux-maintenance-suite-Capstone-Proj-5-Ashutosh_Satpathy
-Make Scripts Executable
 
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/<your-username>/bash-system-maintenance-suite.git
+cd bash-system-maintenance-suite
+2️⃣ Make Scripts Executable
 bash
 Copy code
 chmod +x *.sh
-Run the Suite
+3️⃣ Run the Suite
+bash
+Copy code
+./maintenance_suite.sh
+📦 Backup Directory
+The backup archives are automatically stored at:
 
 bash
 Copy code
-./menu.sh
-Backup Directory
-The backups will be stored in:
+~/backups/
+Each backup is named using a timestamp for easy tracking, e.g.:
 
-bash
 Copy code
-/backup/daily/
-Logs
-Logs for every session are stored under:
+backup_2025-11-07_13-23-29.tar.gz
+🧾 Logs
+All logs are automatically created and stored under:
 
 bash
 Copy code
 ~/maintenance_logs/
-🧮 Example Output
+You’ll find:
 
+backup.log — logs all backup operations
+
+update_cleanup.log — logs system updates and cleanup tasks
+
+log_alerts.log — records errors/warnings found in system logs
+
+suite_<date>.log — records your maintenance suite’s daily run summary
+
+🧮 Example Output
 markdown
 Copy code
 ======================================
@@ -92,23 +107,47 @@ Copy code
 5. Exit
 --------------------------------------
 Enter your choice [1-5]: 1
+
 [2025-11-07 13:23:29] Running backup script...
-[2025-11-07 13:23:29] [SUCCESS] Backup created successfully at: /backup/daily/backup_2025-11-07_13-23-29.tar.gz
+[2025-11-07 13:23:29] [SUCCESS] Backup created successfully at: ~/backups/backup_2025-11-07_13-23-29.tar.gz
 [2025-11-07 13:23:29] Backup completed successfully.
+⏰ Automate with Cron (Optional)
+You can schedule the suite to run automatically every day at 1 AM.
+
+bash
+Copy code
+crontab -e
+Add this line:
+
+bash
+Copy code
+0 1 * * * /home/saiki/maintenance_suite/maintenance_suite.sh >> /home/saiki/maintenance_logs/cron_run.log 2>&1
+✅ This will run the suite daily and log all outputs to cron_run.log.
+
 🧠 Developer Notes
 This capstone project demonstrates:
 
 Linux shell scripting for automation
 
-File system management
+File system management using Bash
 
-Error handling and logging mechanisms
+Error handling and log management
 
-Clean modular design for maintainability
+Clean, modular design for maintainability
+
+Each script can be extended for advanced functionalities such as:
+
+Email or desktop alerts
+
+Remote backup syncs
+
+Automated log cleanup
 
 🏁 Conclusion
-The Bash Scripting Suite for System Maintenance effectively automates essential Linux system maintenance tasks, improving efficiency, reliability, and administrative productivity.
-The modular structure makes it easily extendable for advanced features such as email notifications, remote monitoring, or cloud-based backups.
+The Bash System Maintenance Suite successfully automates crucial system administration tasks like backups, updates, and log monitoring.
+It improves reliability, reduces manual effort, and maintains complete system logs.
 
-© 2025 Sai Kiran Patra
-Linux OS & LSP — Capstone Project
+The modular and menu-driven approach makes it both user-friendly and scalable for future enhancements such as GUI integration or cloud backups.
+
+© 2025 Sai Kiran
+Linux OS & System Programming — Capstone Project
