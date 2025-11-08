@@ -39,65 +39,51 @@ Core System Administration Tools
 
 🧩 Project Structure
 
-Bash Scripting Suite for System Maintenance/
+linux-maintenance-suite/
 │
-├── maintenance_suite/
-│   ├── backup.sh               - Automates system backup with timestamp
-│   ├── update_cleanup.sh       - Updates and cleans the system
-│   ├── log_monitor.sh          - Monitors system logs for errors and alerts
-│   └── maintenance_suite.sh    - Master script to run all tasks in sequence
+├── backup.sh          # Automates system backup with timestamp
+├── update.sh          # Updates and cleans the system
+├── logmonitor.sh      # Monitors system logs for warnings/errors
+├── menu.sh            # Interactive menu for the suite
 │
-├── maintenance_logs/           - Directory for storing generated logs
-│   ├── cron_run.log            - Logs from scheduled cron jobs
-│   └── suite_YYYY-MM-DD.log    - Logs for daily maintenance sessions
-│
-└── README.md                   - Project documentation
-
-
+├── maintenance_logs/  # Directory for storing logs (auto-created)
+└── README.md          # Project documentation
 ⚙️ Setup Instructions
 
 Clone the Repository
 
-git clone https://github.com/SaiZollard/Bash-Scripting-Suite-for-System-Maintenance.git
-cd "Bash Scripting Suite for System Maintenance"
-
-
+bash
+Copy code
+git clone https://github.com/DevAshuTosh10/Linux-maintenance-suite-Capstone-Proj-5-Ashutosh_Satpathy.git
+cd Linux-maintenance-suite-Capstone-Proj-5-Ashutosh_Satpathy
 Make Scripts Executable
 
-chmod +x maintenance_suite/*.sh
-
-
+bash
+Copy code
+chmod +x *.sh
 Run the Suite
 
-./maintenance_suite/maintenance_suite.sh
+bash
+Copy code
+./menu.sh
+Backup Directory
+The backups will be stored in:
 
-
-(Optional) Automate with Cron
-
-crontab -e
-
-
-Add this line to schedule daily maintenance at midnight:
-
-0 0 * * * /path/to/maintenance_suite/maintenance_suite.sh >> /path/to/maintenance_logs/cron_run.log 2>&1
-
-
-📁 Backup Directory
-Backups are stored securely in:
-
+bash
+Copy code
 /backup/daily/
+Logs
+Logs for every session are stored under:
 
-
-🗂️ Logs
-All log outputs and suite operations are stored in:
-
+bash
+Copy code
 ~/maintenance_logs/
-
-
 🧮 Example Output
 
+markdown
+Copy code
 ======================================
-      SYSTEM MAINTENANCE SUITE
+        SYSTEM MAINTENANCE SUITE
 ======================================
 1. Run Backup
 2. Update and Clean System
@@ -106,26 +92,23 @@ All log outputs and suite operations are stored in:
 5. Exit
 --------------------------------------
 Enter your choice [1-5]: 1
-[2025-11-07 00:05:21] Running backup script...
-[2025-11-07 00:07:12] [SUCCESS] Backup created successfully at: /backup/daily/backup_2025-11-07_00-07-12.tar.gz
-[2025-11-07 00:07:15] Backup completed successfully.
-
-
+[2025-11-07 13:23:29] Running backup script...
+[2025-11-07 13:23:29] [SUCCESS] Backup created successfully at: /backup/daily/backup_2025-11-07_13-23-29.tar.gz
+[2025-11-07 13:23:29] Backup completed successfully.
 🧠 Developer Notes
-
 This capstone project demonstrates:
 
 Linux shell scripting for automation
 
-System backup and cleanup mechanisms
+File system management
 
-Error handling and log management
+Error handling and logging mechanisms
 
-Modular, maintainable code design
+Clean modular design for maintainability
 
 🏁 Conclusion
 The Bash Scripting Suite for System Maintenance effectively automates essential Linux system maintenance tasks, improving efficiency, reliability, and administrative productivity.
 The modular structure makes it easily extendable for advanced features such as email notifications, remote monitoring, or cloud-based backups.
 
-© 2025 Sai Kiran
+© 2025 Sai Kiran Patra
 Linux OS & LSP — Capstone Project
