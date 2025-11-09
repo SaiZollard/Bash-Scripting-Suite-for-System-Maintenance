@@ -129,4 +129,4 @@ It improves reliability, reduces manual workload, and maintains detailed logs fo
 This project demonstrates Bash scripting best practices and serves as a foundation for advanced Linux automation.
 
 © 2025 Sai Kiran Patra
-Linux OS & System Programming — Capstone Project
+Linux OS & LSP — Capstone Project
