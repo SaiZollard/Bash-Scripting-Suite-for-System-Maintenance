@@ -1,7 +1,7 @@
 🧠 Bash System Maintenance Suite (Capstone Project)
 
 **Developer:** Sai Kiran Patra 
-**Course:** Linux OS & System Programming  
+**Course:** Linux OS & LSP  
 **Project Type:** Bash Scripting Automation  
 
 ---
@@ -55,46 +55,22 @@ bash-system-maintenance-suite/
 └── README.md               # Project documentation
 
 ⚙️ Setup Instructions
+
 1️⃣ Clone the Repository
 bash
 Copy code
-git clone https://github.com/<your-username>/bash-system-maintenance-suite.git
+git clone https://github.com/SaiZollard/Bash-Scripting-Suite-for-System-Maintenance
 cd bash-system-maintenance-suite
+
 2️⃣ Make Scripts Executable
 bash
 Copy code
 chmod +x *.sh
+
 3️⃣ Run the Suite
 bash
 Copy code
 ./maintenance_suite.sh
-📦 Backup Directory
-The backup archives are automatically stored in:
-
-bash
-Copy code
-~/backups/
-Each backup is timestamped for tracking:
-
-Copy code
-backup_2025-11-07_13-23-29.tar.gz
-🧾 Logs
-All logs are automatically created and stored under:
-
-bash
-Copy code
-~/maintenance_logs/
-Logs include:
-
-backup.log — backup operations
-
-update_cleanup.log — system updates and cleanup
-
-log_alerts.log — detected warnings/errors
-
-suite_<date>.log — maintenance suite activity log
-
-cron_run.log — logs of automated (cron) runs
 
 🧮 Example Output
 markdown
